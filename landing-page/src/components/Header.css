@@ -1,0 +1,75 @@
+
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  
+  .mobile-menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive Navbar CSS */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .nav-links-mobile {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      height: calc(100vh - 20px); /* Full viewport height minus the header height */
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 0 20px; 
+    }
+  
+    .mobile-menu-icon {
+      display: block;
+    }
+  }
+  
+  body {
+    padding-top: 60px;
+  }
+  
